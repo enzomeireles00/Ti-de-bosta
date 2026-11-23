@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03-11</title>
+<style>
+  body {
+    background: #0a0a0a;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .box {
+    border: 2px solid #00ff88;
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,136,0.3);
+  }
+  h1 { font-size: 1.5em; margin-bottom: 20px; }
+  p { line-height: 1.6; white-space: pre-line; }
+  button {
+    background: #00ff88;
+    color: #0a0a0a;
+    border: none;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  button:hover { background: #00cc6a; transform: scale(1.05); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<!-- TELA 1 -->
+<div class="box" id="tela1">
+  <h1>⚠️ ALERTA DE SISTEMA</h1>
+  <p>Detectamos uma conexão incomum
+iniciada em 03/11.
+
+Status: ATIVA e CRESCENDO
+Risco: ALTO (de me apaixonar)</p>
+  <button onclick="mostrar('tela2')">INICIAR PROTOCOLO</button>
+</div>
+
+<!-- TELA 2 -->
+<div class="box hidden" id="tela2">
+  <h1>📋 RELATÓRIO TÉCNICO Nº 001</h1>
+  <p>Suspeito: Enzo Cesar
+Acusação: "TI de bosta"
+Motivo: iPhone dela sem armazenamento
+Testemunha: ela, rindo da minha cara 😄
+
+Fatos apurados:
+✔ Não sabia de cabeça como resolver
+✔ Fui atrás mesmo assim
+✔ Mostrei o caminho pra ela
+✔ Ela resolveu comigo (ou quase sozinha)
+✔ Rimos o tempo todo
+✔ No fim, deu certo
+
+Veredito:
+Não sou TI de bosta.
+Sou TI de parceria.
+Porque no fim, a gente resolveu junto.
+
+P.S.: Se o iPhone encher de novo,
+pode me chamar.
+Não prometo saber de cabeça.
+Mas prometo procurar junto com você.</p>
+  <button onclick="mostrar('tela3')">PRÓXIMA EVIDÊNCIA</button>
+</div>
+
+<!-- TELA 3 -->
+<div class="box hidden" id="tela3">
+  <h1>🗓️ 03 DE NOVEMBRO</h1>
+  <p>Tem coisas que a gente não explica.
+
+Tipo como duas pessoas se encontram
+numa manifestação, em 3 de novembro,
+e o subconsciente já entende
+antes da cabeça processar.
+
+Eu não sei explicar.
+Mas desde aquele dia, tem algo diferente.
+
+E não é bug. É feature. 😄</p>
+  <button onclick="mostrar('tela4')">CONTINUAR</button>
+</div>
+
+<!-- TELA 4 -->
+<div class="box hidden" id="tela4">
+  <h1>💚 COISAS QUE EU REPAREI</h1>
+  <p>▸ Você ri do seu próprio jeito de rir
+▸ Fica animada quando fala de livro
+▸ Tem opinião forte e não pede desculpa
+▸ É tímida, mas quando se solta, ninguém segura
+▸ Gosta de experimentar comida nova
+▸ Me chamou de "TI de bosta" e eu ri
+  (por fora também)</p>
+  <button onclick="mostrar('tela5')">TEM MAIS</button>
+</div>
+
+<!-- TELA 5 -->
+<div class="box hidden" id="tela5">
+  <h1>👀 MENSAGEM SECRETA</h1>
+  <p>Você clicou em tudo.
+Isso diz muito sobre você.
+E eu gosto disso.
+
+"Eu escolhi você.
+E escolheria de novo."</p>
+  <button onclick="mostrar('tela6')">CONTINUAR</button>
+</div>
+
+<!-- TELA 6 -->
+<div class="box hidden" id="tela6">
+  <h1>💌</h1>
+  <p>Se você chegou até aqui,
+é porque clicou em tudo. 👀
+
+Então vou ser sincero:
+
+Eu gosto de você.
+Do seu jeito, da sua risada,
+das nossas conversas desde 3 de novembro.
+
+Não sei onde isso vai dar.
+Mas sei que valeu a pena cada clique.
+
+E tem uma coisa que eu aprendi
+com aquele iPhone cheio:
+
+Não é sobre saber tudo.
+É sobre não largar a mão de quem tá do seu lado
+enquanto a gente procura a solução.
+
+— Enzo Cesar</p>
+</div>
+
+<script>
+function mostrar(id) {
+  document.querySelectorAll('.box').forEach(b => b.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</body>
+</html>
